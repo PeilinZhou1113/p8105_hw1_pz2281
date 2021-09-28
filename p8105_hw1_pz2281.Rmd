@@ -29,3 +29,12 @@ avg_factor = mean(pull(sample_df, factor_vec))
 ```
 Average values of the normal distribution sample vector and the logical vector were successfully calculated. However, warning massages displayed for calculating the average of charactor vector and factor vector. Both of them returned NA as the average.
 
+```{r, results = 'hide'}
+num_logical = as.numeric(pull(sample_df, greater_than_0))
+
+num_char = as.numeric(pull(sample_df, char_vec))
+
+num_fac = as.numeric(pull(sample_df, factor_vec))
+```
+
+
