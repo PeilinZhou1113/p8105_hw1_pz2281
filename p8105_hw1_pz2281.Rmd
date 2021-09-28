@@ -44,4 +44,10 @@ Logical vector has been converted into numeric format of ones and zeros and fact
 data("penguins", package = "palmerpenguins")
 ```
 
+This dataset contains data for `r dim(penguins)[1]` penguins from  `r length(levels(penguins$species))` different species, including `r levels(penguins$species)`.
+
+There are total of `r length(names(penguins))` variables. Other important variables are `r names(penguins)[-1]`. This dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns.
+
+The average flipper length of `r dim(penguins)[1]` penguins is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` mm.
+
 
