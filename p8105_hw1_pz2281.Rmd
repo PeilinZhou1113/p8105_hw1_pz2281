@@ -3,3 +3,27 @@ title: "p8105_hw1_pz2281"
 author: Peilin Zhou
 output: github_document
 ---
+```{r, message=FALSE}
+library(tidyverse)
+```
+
+# Problem 1
+```{r}
+set.seed(2)
+
+sample_df = 
+  tibble(
+    normal_sample = rnorm(10),
+    greater_than_0 = as.logical(normal_sample > 0),
+    char_vec = c("a","b","c","d","e","f","g","h","i","j"),
+    factor_vec = factor(c("cold","hot","worm","hot","worm","hot","worm","cold","cold","hot"))
+  )
+
+avg_normal=mean(pull(sample_df, normal_sample))
+
+avg_greater = mean(pull(sample_df, greater_than_0))
+
+avg_char = mean(pull(sample_df, char_vec))
+
+avg_factor = mean(pull(sample_df, factor_vec))
+```
