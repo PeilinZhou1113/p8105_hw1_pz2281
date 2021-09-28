@@ -50,4 +50,12 @@ There are total of `r length(names(penguins))` variables. Other important variab
 
 The average flipper length of `r dim(penguins)[1]` penguins is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` mm.
 
+```{r}
+ggplot(penguins, aes(x=bill_depth_mm, y=flipper_length_mm, color=species)) +
+  geom_point()
+
+ggsave("ScattorPlot_Penguins.pdf", height = 4, width = 6)
+```
+
+
 
