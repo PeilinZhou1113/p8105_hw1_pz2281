@@ -37,4 +37,5 @@ num_char = as.numeric(pull(sample_df, char_vec))
 num_fac = as.numeric(pull(sample_df, factor_vec))
 ```
 
+Logical vector has been converted into numeric format of ones and zeros and factor vector has been converted to numeric vector where each number represents a different category/level. However, the charactor vector was unable to be converted to a numeric vector. A warning message was displayed: NAs introduced by coercion. This explained why we were unable to calculate the average of this vector, since the elements in the charactor vector are not string representations of numbers, they cannot be understood and transformed into logical or numeric vectors which R can process their average values.
 
